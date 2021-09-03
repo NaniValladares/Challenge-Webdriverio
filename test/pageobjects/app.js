@@ -1,12 +1,10 @@
 class App{
 
 
-    openLoginPage(){
+    openPage(){
         browser.url('https://www.shino.de/parkcalc/')
       
     }
-
-
 
 }
 
