@@ -12,6 +12,10 @@ class ValetParkingPage extends Base{
     get inputFinish(){
         return $('#LeavingDate')
     } 
+
+    get result(){
+        return $('body > form > table > tbody > tr:nth-child(4) > td:nth-child(2) > span.SubHead > b')
+    }
  
 
     fillForm(startDate,endDate){
