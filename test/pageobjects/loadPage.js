@@ -3,18 +3,21 @@ import Base from '../pageobjects/base'
 class LoadPage extends Base{
 
     get title(){
-        return $('Parking Cost Calculator')
+        return $('.PageTitle')
+    }
+    get Calculator(){
+        return $('body > form > table > tbody')
+     }
+ 
+    get clickButton(){
+        return $('/html/body/form/input[2]')
     }
 
-    get calculator(){
-       return $('body > form > table > tbody')
+    submitForm() {
+        this.clickButton.click()
     }
 
-    get Clickbutton(){
-        return $('body > form > input[type=submit]:nth-child(3)')
-    }
 
 }
-
 
 export default new LoadPage()

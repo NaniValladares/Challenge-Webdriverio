@@ -1,5 +1,5 @@
 import App from '../pageobjects/app';
-import loadPage from '../pageobjects/loadPage';
+import LoadPage from '../pageobjects/loadPage';
 
 describe('Parking page', () => {
 
@@ -11,12 +11,11 @@ describe('Parking page', () => {
 
     it('should display the calculator', () => {
         App.openPage()
-        LoadPage.Calculator.toBeVisible()
+        LoadPage.Calculator.waitForExist()
     })
 
     it('should have clickable button', () => {
-        App.openPage()
-        LoadPage.ClickButton.toBeClickable()
+        LoadPage.submitForm();
     }) 
 
 
