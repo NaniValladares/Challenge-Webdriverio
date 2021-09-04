@@ -22,20 +22,18 @@ class ShortTermParkingPage extends Base{
         return $('#LeavingTime');
     } 
 
-    calculate(startDate,endDate){
-        this.inputStart.setValue(startDate)
-        this.inputFinish.setValue(endDate)
-        this.Calculatebutton.click()
-        this.pauseMedium()
+    get ParkingLot(){
+        return $("#ParkingLot > option:nth-child(2)")
     }
 
-    calculateTime(startDate,endDate,startTime,endTime){
+    calculate(startDate,endDate,startTime,endTime){
+        this.ParkingLot.click()
         this.inputStart.setValue(startDate)
         this.inputFinish.setValue(endDate)
         this.inputStartTime.setValue(startTime)
         this.inputEndTime.setValue(endTime)
         this.Calculatebutton.click()
-        this.pauseMedium()
+        this.pauseShort()
     }
 
 }

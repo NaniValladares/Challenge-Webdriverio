@@ -22,7 +22,8 @@ exports.config = {
     //
     specs: [
         './test/specs/load.js',
-        './test/specs/valetParking.js'
+        './test/specs/valetParking.js',
+        './test/specs/shortTermParking.js'
     ],
     // Patterns to exclude.
     exclude: [

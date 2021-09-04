@@ -35,7 +35,7 @@ class ValetParkingPage extends Base{
         this.inputStartTime.setValue(startTime)
         this.inputEndTime.setValue(endTime)
         this.Calculatebutton.click()
-        this.pauseMedium()
+        this.pauseShort()
     }
 
 }
