@@ -1,5 +1,5 @@
 import App from '../pageobjects/app';
-import ValetParkingPage from '../pageobjects/ValetParkingPage';
+import ParkingPage from '../pageobjects/ParkingPage';
 
 describe('Valet Parking test', () => {
 

@@ -1,7 +1,7 @@
 import { subset } from 'semver';
-import Base from '../pageobjects/base';
+import Base from './base';
 
-class ValetParkingPage extends Base{
+class ParkingPage extends Base{
 
     get Calculatebutton(){
         return $('body > form > input[type=submit]:nth-child(3)')
