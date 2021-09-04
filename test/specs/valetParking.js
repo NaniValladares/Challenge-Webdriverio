@@ -7,38 +7,21 @@ describe('Valet Parking test', () => {
     it('Valet Parking: should stay for a day', () => {
         App.openPage()
         ValetParkingPage.calculate('1/21/2021', '1/22/2021')
-        result = $('body > form > table > tbody > tr:nth-child(4) > td.SubHead > b')
+        const result = $('body > form > table > tbody > tr:nth-child(4) > td:nth-child(2) > span.SubHead > b')
         expect(result).toHaveTextContaining("$ 18.00"); 
     });
         
-    /*it('Valet Parking: should stay for five hours or less', () => {
-        result= $("body > form > table > tbody > tr:nth-child(4) > td:nth-child(2) > span.SubHead > b");
-        inputStartDate = $('#StartingDate');
-        inputEndDate = $('#LeavingDate');
-        inputStartTime = $('#StartingTime');
-        inputEndTime = $('#LeavingTime');
-        inputStartDate.setValue('1/21/2021');
-        inputEndDate.setValue('1/21/2021');
-        inputStartTime.setValue('12:00');
-        inputEndTime.setValue('3:00');
-        Calculatebutton.click();
+    it('Valet Parking: should stay for five hours or less', () => {
+        ValetParkingPage.calculateTime('1/21/2021', '1/21/2021', '12:00', '3:00')
+        const result = $('body > form > table > tbody > tr:nth-child(4) > td:nth-child(2) > span.SubHead > b')
         expect(result).toHaveTextContaining("$ 12.00");
     });
         
     it('Valet Parking: should stay between one and two days', () => {
-        result= $("body > form > table > tbody > tr:nth-child(4) > td:nth-child(2) > span.SubHead > b");
-        Calculatebutton = $("body > form > input[type=submit]:nth-child(3)");
-        inputStartDate = $('#StartingDate');
-        inputEndDate = $('#LeavingDate');
-        inputStartTime = $('#StartingTime');
-        inputEndTime = $('#LeavingTime');
-        inputStartDate.setValue('1/21/2021');
-        inputEndDate.setValue('1/22/2021');
-        inputStartTime.setValue('12:00');
-        inputEndTime.setValue('3:00');
-        Calculatebutton.click();
+        ValetParkingPage.calculateTime('1/21/2021', '1/22/2021', '12:00', '3:00')
+        const result = $('body > form > table > tbody > tr:nth-child(4) > td:nth-child(2) > span.SubHead > b')
         expect(result).toHaveTextContaining("$ 36.00");
-    });*/
+    });
         
 
 

@@ -14,12 +14,30 @@ class ValetParkingPage extends Base{
         return $('#LeavingDate')
     } 
 
+    get inputStartTime(){
+        return $('#StartingTime')
+    } 
+        
+    get inputEndTime(){
+        return $('#LeavingTime');
+    } 
+
     calculate(startDate,endDate){
         this.inputStart.setValue(startDate)
         this.inputFinish.setValue(endDate)
         this.Calculatebutton.click()
         this.pauseMedium()
     }
+
+    calculateTime(startDate,endDate,startTime,endTime){
+        this.inputStart.setValue(startDate)
+        this.inputFinish.setValue(endDate)
+        this.inputStartTime.setValue(startTime)
+        this.inputEndTime.setValue(endTime)
+        this.Calculatebutton.click()
+        this.pauseMedium()
+    }
+
 }
 
 export default new ValetParkingPage()
