@@ -5,10 +5,10 @@ describe('Valet Parking test', () => {
 
 
     it('Valet Parking: should stay for a day', () => {
-        App.openPage
-        ValetParkingPage.fillForm('1/21/2021', '1/22/2021')
-        ValetParkingPage.Calculate()
-        expect(ValetParkingPage.result).toHaveTextContaining("$ 18.00");
+        App.openPage()
+        ValetParkingPage.calculate('1/21/2021', '1/22/2021')
+        result = $('body > form > table > tbody > tr:nth-child(4) > td.SubHead > b')
+        expect(result).toHaveTextContaining("$ 18.00"); 
     });
         
     /*it('Valet Parking: should stay for five hours or less', () => {

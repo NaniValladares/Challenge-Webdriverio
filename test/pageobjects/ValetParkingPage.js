@@ -1,4 +1,5 @@
-import Base from '../pageobjects/base'
+import { subset } from 'semver';
+import Base from '../pageobjects/base';
 
 class ValetParkingPage extends Base{
 
@@ -12,20 +13,6 @@ class ValetParkingPage extends Base{
     get inputFinish(){
         return $('#LeavingDate')
     } 
-
-    get result(){
-        return $('body > form > table > tbody > tr:nth-child(4) > td:nth-child(2) > span.SubHead > b')
-    }
- 
-
-    fillForm(startDate,endDate){
-        this.inputStart.setValue(startDate)
-        this.inputFinish.setValue(endDate)
-    }
-
-    submitCalculateDates(){
-        this.Calculatebutton.click()
-    }
 
     calculate(startDate,endDate){
         this.inputStart.setValue(startDate)
