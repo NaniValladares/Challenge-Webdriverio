@@ -1,4 +1,3 @@
-import { subset } from 'semver';
 import Base from './base';
 
 class ParkingPage extends Base{
@@ -40,4 +39,4 @@ class ParkingPage extends Base{
 
 }
 
-export default new ValetParkingPage()
+export default new ParkingPage()

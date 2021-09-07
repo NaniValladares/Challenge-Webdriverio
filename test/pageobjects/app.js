@@ -3,7 +3,6 @@ class App{
 
     openPage(){
         browser.url('https://www.shino.de/parkcalc/')
-      
     }
 
 }
