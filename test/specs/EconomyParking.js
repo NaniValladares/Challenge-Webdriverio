@@ -3,6 +3,7 @@ import ParkingPage from '../pageobjects/ParkingPage';
 
 describe('Economy lot parking test', () => {
     it('Economy Lot Parking: should stay for one hour', () => {
+        App.openPage()
         const ParkingLot = $("#ParkingLot > option:nth-child(3)");
         ParkingLot.click();
         ParkingPage.calculateTime('1/21/2021', '1/21/2021', '12:00', '1:00')
